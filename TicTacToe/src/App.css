@@ -1,0 +1,209 @@
+
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #1F3641;
+  color:#A8BFC9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #1F3641;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #405f6e;
+  transition: background-color 0.3s;
+  border-bottom: 5px solid #111f25;
+}
+
+
+
+
+.square.X {
+  color: #31C3BD;
+}
+
+.square.O {
+  color:#F2B137;
+}
+
+.square:hover {
+  background-color: #A8BFC9;
+}
+
+.turn {
+  font-size: 20px;
+  font-weight: 700;
+  color: #A8BFC9;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #1F3641;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 8px;
+  padding: 16px 16px 8px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+  margin-top: 20px;
+}
+
+.scoreboard div {
+  flex: 1;
+  font-size: 14px;
+  font-weight:700 ;
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+  margin: 0 5px;
+  color: #1F3641; 
+  border-radius: 5px;
+  height: 40px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+
+}
+.Xscore {
+  background-color: #31C3BD;
+}
+
+.Oscore {
+  background-color: #F2B137;
+}
+
+.Tscore {
+  background-color: #A8BFC9;
+}
+
+.scoreboard div::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 8px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 100%;
+  height: 266px;
+  background-color: #405f6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  
+}
+
+.modal-content {
+  text-align: center;
+  color: #A8BFC9; 
+ 
+}
+
+.modal h2.result {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.x-winner {
+  color: #31C3BD; 
+}
+
+.o-winner {
+  color: #F2B137; 
+}
+
+.tie {
+  color: #A8BFC9; 
+}
+
+.modal p.round-result {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button-quit {
+  background-color: #C0C0C0; 
+  color: #1F3641;
+  box-shadow: 0px -4px 0px 0px #6B8997 inset;
+
+}
+
+.button-next {
+  background-color: #F2B137;
+  color: #1F3641;
+  box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+}
+
+.restart-button {
+  margin-right: -255px;
+
+  background-color: #A8BFC9;
+  color:#1F3641 ;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.restart-button:hover {
+  background-color: #73858e;
+}
